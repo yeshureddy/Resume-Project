@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make your resume</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+        {% if user.is_authenticated %}
+            <h1>Hello,{{user.first_name}}</h1>
+            <a href="/accounts/signout">Log Out</a>
+        {%else%}
+            <h3>New User?</h3>
+            <a href="/accounts/">Register</a><br>
+            <h3>Existing User ?</h3>
+            <a href="/accounts/signin">Log in</a>
+        {%endif%}
+        
+</body>
+</html>

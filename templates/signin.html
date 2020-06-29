@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Login</title>
+</head>
+<body>
+    <form method="post" >
+        {%csrf_token%}
+         <strong>Enter Your User Name</strong>
+         <input type="text" name="uid"required><br>
+         <strong>Enter your password</strong>
+         <input type="password"name="password"required><br>
+        <input type="submit">
+    </form>
+    {% for x in messages%}
+        {{x}}
+    {% endfor %}
+</body>
+</html>
